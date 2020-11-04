@@ -1,0 +1,20 @@
+<p>ng-if-ngfor-ng-switch works!</p>
+
+<h2 *ngIf="showHidden; else elseBlock">
+    Bartek
+</h2>
+<ng-template #elseBlock>
+    Hidden name
+</ng-template>
+
+<button (click)="showName(showHidden)">Show Name</button><br><br>
+
+<div [ngSwitch]="color"> 
+    <div *ngSwitchCase = "'red'" [style.color]="'red'">You picked red</div>
+    <div *ngSwitchCase = "'blue'" [style.color]="'blue'">You picked blue</div>
+    <div *ngSwitchCase = "'green'" [style.color]="'green'">You picked green</div>
+</div>
+
+<div *ngFor="let color of colors">
+    <h2>{{color}}</h2>
+</div>
