@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,12 @@ import { ComponetOneComponent } from './component-interactin/componet-one/compon
 import { PipeComponent } from './pipe/pipe.component';
 import { ComponetTwoComponent } from './component-interactin/componet-two/componet-two.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
+
+import { EmployeeService } from './services/employee.service';
+import { from } from 'rxjs';
+
 
 @NgModule({
   declarations: [
@@ -29,14 +36,17 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     ComponetOneComponent,
     PipeComponent,
     ComponetTwoComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

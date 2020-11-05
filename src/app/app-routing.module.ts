@@ -11,6 +11,8 @@ import { ComponetOneComponent } from './component-interactin/componet-one/compon
 import { PipeComponent } from './pipe/pipe.component';
 import { ComponetTwoComponent } from './component-interactin/componet-two/componet-two.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 const routes: Routes = [        
   { path: '', component: InterpolationComponent },
   { path: 'PropertyBindingComponent', component: PropertyBindingComponent },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'ComponetOneComponent', component: ComponetOneComponent },
   { path: 'PipeComponent', component: PipeComponent },
   { path: 'ComponetTwoComponent', component: ComponetTwoComponent },
+  { path: 'EmployeeListComponent', component: EmployeeListComponent },
+  { path: 'EmployeeDetailComponent', component: EmployeeDetailComponent },
 ];
 
 @NgModule({
