@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Employees } from '../model/employees';
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+// import 'rxjs/add/operator/catch';
+// import 'rxjs/add/observable/throw';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ private _url = "/assets/data/employees.json";
   constructor(private http:HttpClient) { }
   getEmployees():Observable<Employees[]>{ 
 
-    return this.http.get<Employees[]>(this._url)
-      .catch(this.errorHandler);
+    return this.http.get<Employees[]>(this._url);
+      // .catch(this.errorHandler);
 
   //   return [
   //   {"id":1,"name":"Bartosz",age:24},
@@ -26,8 +26,8 @@ private _url = "/assets/data/employees.json";
   // ]
 }
 
-errorHandler(error:HttpErrorResponse){
-return Observable.throw.(error.message || "Server Error")
-}
+// errorHandler(error:HttpErrorResponse){
+// return Observable.throw.(error.message || "Server Error")
+// }
 
 }
